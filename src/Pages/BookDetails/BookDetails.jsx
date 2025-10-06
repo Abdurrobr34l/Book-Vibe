@@ -9,6 +9,7 @@ const BookDetails = () => {
   const book = booksData.find((bookById) => bookById.bookId === Number(id));
   // console.log(book);
   const {
+    bookById,
     bookName,
     author,
     category,
@@ -23,10 +24,10 @@ const BookDetails = () => {
   } = book;
 
   return (
-    <div className="flex justify-center">
+    <div key={bookById} className="flex justify-center">
       <div className="card flex lg:card-side lg:gap-12">
         {/* Image */}
-        <figure className="p-16 bg-[#f3f3f3] rounded-2xl lg:w-full">
+        <figure className="p-16 bg-[#f3f3f3] !rounded-2xl lg:w-full">
           <img src={image} alt={alt} className="!w-[425px]" />
         </figure>
 
@@ -50,7 +51,7 @@ const BookDetails = () => {
 
           {/* Review */}
           <p className="grow-0 py-6">
-            <span className="mr-4 font-bold">Review:</span> {review}
+            <span className="font-bold">Review:</span> {review}
           </p>
 
           {/* Tags */}
