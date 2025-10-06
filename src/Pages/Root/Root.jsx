@@ -6,13 +6,13 @@ import Container from '../../Components/Container/Container';
 
 const Root = () => {
   return (
-    <div>
+    <>
       <Container>
       <Header></Header>
       <Outlet></Outlet>
       <Footer></Footer>
       </Container>
-    </div>
+    </>
   );
 };
 

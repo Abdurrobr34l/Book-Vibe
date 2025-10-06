@@ -1,3 +1,15 @@
 /** THIS FILE IS ROOT CSS USED IN MAIN.JSX */
 @import "tailwindcss";
 @plugin "daisyui";
+
+/** BUTTON STYLE START */
+.btn {
+  @apply font-bold transition-colors duration-300 ease-linear;
+}
+.hover-green {
+  @apply hover:bg-[#52dc3d] hover:text-[#131313]
+}
+.hover-blue {
+  @apply hover:bg-[#47b3bf] hover:text-[#131313]
+}
+/** BUTTON STYLE END */

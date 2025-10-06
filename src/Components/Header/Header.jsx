@@ -8,7 +8,7 @@ const Header = () => {
     { id: 3, name: "Pages to Read", path: "/pages-to-read" },
   ];
 
-  // Tailwind classes for active and normal links
+  // for active and normal links
   const activeClass = "text-[#23BE0A] border-1 border-[#23BE0A] bg-transparent";
   const normalClass = "text-[#131313] hover:text-[#23BE0A]";
 
@@ -52,12 +52,12 @@ const Header = () => {
             ))}
 
             <li className="lg:hidden">
-              <a className="btn bg-[#23BE0A] shadow-none border-none">
+              <a className="btn bg-[#23BE0A] shadow-none border-none hover-green">
                 Sign In
               </a>
             </li>
             <li className="lg:hidden">
-              <a className="btn bg-[#59C6D2] shadow-none border-none">
+              <a className="btn bg-[#59C6D2] shadow-none border-none hover-blue">
                 Sign Up
               </a>
             </li>
@@ -90,8 +90,8 @@ const Header = () => {
 
       {/* Buttons */}
       <div className="navbar-end gap-5 hidden lg:flex lg:flex-1">
-        <a className="btn bg-[#23BE0A] shadow-none border-none">Sign In</a>
-        <a className="btn bg-[#59C6D2] shadow-none border-none">Sign Up</a>
+        <a className="btn bg-[#23BE0A] shadow-none border-none hover-green">Sign In</a>
+        <a className="btn bg-[#59C6D2] shadow-none border-none hover-blue">Sign Up</a>
       </div>
     </header>
   );

@@ -3,7 +3,6 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <>
       <footer className="footer sm:footer-horizontal footer-center p-4">
         <aside>
           <p>
@@ -11,7 +10,6 @@ const Footer = () => {
           </p>
         </aside>
       </footer>
-    </>
   );
 };
 
