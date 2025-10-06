@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const navigationData = [
@@ -14,7 +14,8 @@ const Header = () => {
 
   return (
     <header className="navbar py-5 px-0">
-      <div className="navbar-start">
+      <div className="flex flex-1 flex-row-reverse items-center justify-between lg:flex-1">
+        {/* Dropdown Menu */}
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn-ghost pr-5 lg:hidden">
             <svg
@@ -35,7 +36,7 @@ const Header = () => {
 
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52"
+            className="menu menu-sm dropdown-content right-5 gap-3 bg-white rounded-box z-1 mt-5 w-52"
           >
             {navigationData.map((route) => (
               <li key={route.id}>
@@ -49,14 +50,29 @@ const Header = () => {
                 </NavLink>
               </li>
             ))}
+
+            <li className="lg:hidden">
+              <a className="btn bg-[#23BE0A] shadow-none border-none">
+                Sign In
+              </a>
+            </li>
+            <li className="lg:hidden">
+              <a className="btn bg-[#59C6D2] shadow-none border-none">
+                Sign Up
+              </a>
+            </li>
           </ul>
         </div>
 
-        <a className="btn-ghost text-[28px] font-bold">Books Vibe</a>
+        {/* Logo */}
+        <Link to={"/"} className="btn-ghost text-[28px] font-bold">
+          Book Vibe
+        </Link>
       </div>
 
+      {/* Nav Menu */}
       <nav className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal">
+        <ul className="menu menu-horizontal gap-5">
           {navigationData.map((route) => (
             <li key={route.id}>
               <NavLink
@@ -72,7 +88,8 @@ const Header = () => {
         </ul>
       </nav>
 
-      <div className="navbar-end gap-5">
+      {/* Buttons */}
+      <div className="navbar-end gap-5 hidden lg:flex lg:flex-1">
         <a className="btn bg-[#23BE0A] shadow-none border-none">Sign In</a>
         <a className="btn bg-[#59C6D2] shadow-none border-none">Sign Up</a>
       </div>
