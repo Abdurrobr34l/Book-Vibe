@@ -9,7 +9,7 @@
     "totalPages": 192,
     "rating": 4.5,
     "category": "Classic",
-    "tags": ["Fiction", "Romance"],
+    "tags": ["Fiction", "Romance", "Tragedy"],
     "publisher": "Scribner",
     "yearOfPublishing": 1925
   },
@@ -37,7 +37,7 @@
     "totalPages": 328,
     "rating": 4.6,
     "category": "Fiction",
-    "tags": ["Dystopian", "Political"],
+    "tags": ["Dystopian", "Political", "Thriller"],
     "publisher": "Secker & Warburg",
     "yearOfPublishing": 1949
   },
@@ -79,7 +79,7 @@
     "totalPages": 310,
     "rating": 4.9,
     "category": "Fantasy",
-    "tags": ["Adventure", "Epic"],
+    "tags": ["Adventure", "Epic", "Fantasy"],
     "publisher": "Allen & Unwin",
     "yearOfPublishing": 1937
   },
@@ -93,7 +93,7 @@
     "totalPages": 309,
     "rating": 4.8,
     "category": "Fantasy",
-    "tags": ["Magic", "Young Adult"],
+    "tags": ["Magic", "Young Adult", "Adventure"],
     "publisher": "Bloomsbury",
     "yearOfPublishing": 1997
   },
@@ -121,7 +121,7 @@
     "totalPages": 316,
     "rating": 4.2,
     "category": "Mystery",
-    "tags": ["Suspense", "Psychological"],
+    "tags": ["Suspense", "Psychological", "Thriller"],
     "publisher": "Riverhead Books",
     "yearOfPublishing": 2015
   }
