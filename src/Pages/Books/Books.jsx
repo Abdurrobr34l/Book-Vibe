@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Books = ({ booksData }) => {
   return (
@@ -11,10 +12,12 @@ const Books = ({ booksData }) => {
 
         {/* Book */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
           {/* Individual Book */}
           {booksData.map(
-            ({ bookId, bookName, author, image, alt, category, rating, tags }) => (
-              <div key={bookId} className="card p-6 border-2 border-[#f3f3f3] rounded-3xl">
+            ({ bookId, bookName, author, image, alt, category, rating, tags, yearOfPublishing }) => (
+              <Link to={`/book-details/${bookId}`}>
+                <div key={bookId} className="card p-6 border-2 border-[#f3f3f3] rounded-3xl">
                 {/* Image */}
                 <figure className="bg-[#f3f3f3] rounded-2xl">
                   <img
@@ -36,7 +39,10 @@ const Books = ({ booksData }) => {
                   </div>
 
                   {/* Book & Author Name */}
-                  <h2 className="card-title mt-4 text-2xl font-bold">{bookName}</h2>
+                  <h2 className="card-title mt-4 text-2xl font-bold">
+                    {bookName}
+                    <span className="badge ml-3 font-medium bg-[#22be0a19] text-[#23BE0A] border-none rounded-full">{yearOfPublishing}</span>
+                  </h2>
                   <h2 className="card-title text-base font-medium text-[#131313CC]">
                     By: {author}
                   </h2>
@@ -51,9 +57,11 @@ const Books = ({ booksData }) => {
                     </div>
                   </div>
                 </div>
-              </div>
+                </div>
+              </Link>
             )
           )}
+
         </div>
       </section>
     </>
