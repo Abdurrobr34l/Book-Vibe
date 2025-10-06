@@ -9,11 +9,11 @@ const Header = () => {
   ];
 
   // for active and normal links
-  const activeClass = "text-[#23BE0A] border-1 border-[#23BE0A] bg-transparent";
+  const activeClass = "text-[#23BE0A] font-bold py-3 px-5 border-1 border-[#23BE0A] bg-transparent";
   const normalClass = "text-[#131313] hover:text-[#23BE0A]";
 
   return (
-    <header className="navbar py-5 px-0">
+    <header className="navbar py-5 px-0 md:py-10 lg:py-14">
       <div className="flex flex-1 flex-row-reverse items-center justify-between lg:flex-1">
         {/* Dropdown Menu */}
         <div className="dropdown">
@@ -72,7 +72,7 @@ const Header = () => {
 
       {/* Nav Menu */}
       <nav className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal gap-5">
+        <ul className="menu menu-horizontal items-center gap-5">
           {navigationData.map((route) => (
             <li key={route.id}>
               <NavLink
